@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tinkercrafts</title>
+  </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <body>
+    <nav class="navbar navbar-light" style="background-color:#F44336   ;">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="/home/">Home</a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/events/">Events<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/subscribe/">Subscribe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register/" tabindex="-1" aria-disabled="true">Register</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </nav>
+    <div class="container">
+      <div class="form-row">
+        <div class="form-group col-md-2">
+        </div>
+        <div class="form-group col-md-8">
+          <img src="{% static 'logo1.png' %}" width="800px" height="300px">
+        </div>
+        <div class="form-group col-md-2">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <img src="{% static 'workshop3.jpg' %}" class="img-fluid" alt="Responsive image" width="600px" height="350px">
+        </div>
+        <div class="form-group col-md-4">
+          <img src="{% static 'workshop4.jpg' %}" class="img-fluid" alt="Responsive image" width="600px" height="350spx">
+        </div>
+        <div class="form-group col-md-4">
+          <img src="{% static 'workshop5.jpg' %}" class="img-fluid" alt="Responsive image" width="600px" height="350px">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-row">
+        <h4>Tinkercrafts</h4>
+      </div><br>
+      <div class="form-row">
+        <h3><b>Hello!</b></h3>
+      </div><br>
+      <div class="form-row">
+        <p style="font-size:20px">Tinkercrafts is our initiative to help inquisitive, thinking minds better their learning by inculcating hands on training. Our vision is to instill creative confidence in students, bringing out the inner innovator in them!</p>
+      </div><br>
+      <div class="form-row">
+        <h3><b>So… what do we do exactly?</b></h3>
+      </div><br>
+      <div class="form-row">
+        <p style="font-size:20px">We specialize in electronics, coding and creating fun! ;). We are makers, whose sole purpose of existence is to create and be creative. You will find us conducting workshops around the city – in schools, in museums and of-course, we are regular exhibitors at fairs and tech festivals where you would get to see all the cool stuff we have created!</p>
+      </div><br>
+      <div class="form-row">
+        <h3><b>What can we do for you?</b></h3>
+      </div><br>
+      <div class="form-row">
+        <p style="font-size:20px">We offer various hands on courses, interactive and skill building workshops (where you take  home what you make!) and project building for engineers. If you’re representing a school, college, or company and would like to have a fun session on creative learning with electronics or maybe a serious course for over a period, do contact us. We’ll make it happen!</p>
+      </div><br>
+      <div class="form-row">
+        <h3><b>Who can attend the workshops?</b></h3>
+      </div><br>
+      <div class="form-row">
+        <p style="font-size:20px">Anyone and everyone! We believe everyone is a maker, and our workshops are geared towards bringing out your creative side. We believe learning is an endless process and there is always more to know.<br><br>
+          So drop by at one of our workshops for a session filled with creative circuit building and fun immersive interactions.<br><br>
+          Check out our <a href="/events/">events</a> page to know more about the upcoming workshops!<br><br>
+          <a href="/subscribe/" style="font-size:20px"><b>SUBSCRIBE WITH US FOR REGULAR UPDATES ON FUTURE EVENTS</b></a></p>
+        </div>
+      </div>
+      <hr>
+      <div  style="background-color:#F5F5F5">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <p style="font-size:17px">-Where we work-</p>
+            <p style="font-size:17px">Bangalore, India</p>
+            <p style="font-size:17px">Phonenumber: +91 9902311722</p>
+            <p style="font-size:17px">Email:bhchinmayee1@gmail.com</p>
+          </div>
+          <div class="form-group col-md-4">
+            <p style="font-size:17px ">-Contact with us-</p>
+            <hr>
+            <a href="/home/" class="fa fa-facebook"></a><br>
+            <a href="https://www.linkedin.com/in/chinmayee-chimmi-772148168/" class="fa fa-linkedin"></a><br>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
