@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-{% load static %}
 <html>
 	<head>
-		<title>tinker_subscriber</title>
+		<title>Add events</title>
 	</head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<body>
-		<nav class="navbar navbar-light" style="background-color:DodgerBlue;">
+		<nav class="navbar navbar-light" style="background-color: DodgerBlue  ;">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -26,25 +25,40 @@
 					</ul>
 				</div>
 			</nav>
-		</nav>
-		<form action="/subscribe/" method="POST">
+		</nav><br>
+		<form action="/addevent/" method="POST">
 			{% csrf_token %}
 			<div class="container">
 				<div class="form-group form-check">
-					<label for="exampleInputPassword1">Name</label>
-					<input type="text" class="form-control" name="subscriber_name" placeholder="Fullname">
+					<label for="exampleInputPassword1">Event Name</label>
+					<input type="text" class="form-control" name="event_name" placeholder="Fullname">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Email address</label>
-					<input type="email" class="form-control" name="subscriber_email" aria-describedby="emailHelp" placeholder="Enter email">
-					<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					<label for="exampleInputEmail1">Event Date</label>
+					<input type="date" class="form-control" name="event_date" aria-describedby="emailHelp" placeholder="Enter date">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPassword1">Phone number</label>
-					<input type="tell" class="form-control" name="subscriber_phonenumber" placeholder="Phonenumber">
+					<label for="exampleInputPassword1">Fee</label>
+					<input type="text" class="form-control" name="fee" placeholder="Enter the fee">
 				</div>
-				<button type="submit" class="btn btn-primary">Subscribe</button>
-			</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Event Venue</label>
+					<input type="text" class="form-control" name="event_venue" placeholder="Venue">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Capacity</label>
+					<input type="text" class="form-control" name="capacity" placeholder="Capacity">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">About</label>
+					<input type="text" class="form-control" name="about" placeholder="About the event">
+				</div>
+				<button type="submit" class="btn btn-primary">Add</button>
+			</div>			
+		</div>
+		<div class="input-group">
 		</form>
 	</body>
+</html>
+</body>
 </html>

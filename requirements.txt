@@ -1,0 +1,9 @@
+The softwares needed will be :
+sublime text
+python 3.7
+First open the files in sublime text.
+Then open the command prompt and direct to the folder where the project files are saved.
+Use "python manage.py runserver" to run the server.
+Copy the link obtained and give '<link>/home' to get the home page.
+The username of the admin is "Chinmayee"
+The password is "Chinnu908"

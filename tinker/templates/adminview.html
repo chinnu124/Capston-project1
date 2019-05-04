@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>adminview</title>
+	</head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<body>
+		<div class="container">
+			<table class="table table-hover table-dark">
+				<thead>
+					<tr>
+						<th scope="col">Event_Id</th>
+						<th scope="col">Name</th>
+						<th scope="col">Date</th>
+						<th scope="col">Fee</th>
+						<th scope="col">Venue</th>
+						<th scope="col">Capacity</th>
+						<th scope="col">registered</th>
+					</tr>
+				</thead>
+				{% for event in events%}
+					<tbody>
+						<tr>
+							<th scope="row">{{event.event_id}}</th>
+							<td>{{event.event_name}}</td>
+							<td>{{event.event_date}}</td>
+							<td>{{event.fee}}</td>
+							<td>{{event.event_venue}}</td>
+							<td>{{event.capacity}}</td>
+							<td>{{event.registered}}</td>
+						</tr>
+					</tbody>
+				{% endfor %}
+			</table>
+			<a href="/addevent/"><button type="submit" class="btn btn-primary">Add events!!</button></a>
+		</div>
+	</body>
+</html>

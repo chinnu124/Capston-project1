@@ -6,8 +6,10 @@ class Event(models.Model):
 	fee=models.IntegerField(default=0)
 	event_venue=models.CharField(max_length=200)
 	capacity=models.IntegerField(default=0)
+	registered=models.IntegerField(default=0)
 	about=models.TextField()
 	cover=models.ImageField(upload_to="events/")
+
 
 	def __str__(self):
 		return self.event_name

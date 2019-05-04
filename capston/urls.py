@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from tinker.views import home,events,events_catalogue,subscribers,attendees,messages
+from tinker.views import home,events,events_catalogue,subscribers,attendees,messages,adminview,addevent
 
 urlpatterns = [
 	path('home/',home),
@@ -24,5 +24,7 @@ urlpatterns = [
     path('subscribe/',subscribers),
     path('register/',attendees),
     path('message/',messages),
+    path('adminview/',adminview),
+    path('addevent/',addevent),
     path('admin/', admin.site.urls),
 ]

@@ -30,12 +30,13 @@ def subscribers(request):
 def attendees(request):
 	events = Event.objects.all()
 	if request.method == "POST":
-		print("hii")
 		at_name=request.POST.get('name',None)
 		at_email=request.POST.get('email',None)
 		at_phonenumber=request.POST.get('phonenumber',None)
 		at_event=int(request.POST.get('event',None))
 		event = Event.objects.get(pk=at_event)
+		event.registered += 1
+		event.save()
 		#at_amount=request.POST.get('amount_payable',None)
 		print(at_name)
 		new_attendee=Attendee.objects.create(name=at_name,email=at_email,phonenumber=at_phonenumber,event=event )
@@ -59,8 +60,24 @@ def messages(request):
 		msg.send()
 	return HttpResponse("SUCCESS")
 
-		
-		
+def addevent(request):
+	events=Event.objects.all()
+	if request.method == "POST":
+		e_name= request.POST.get('event_name',None)
+		e_date= request.POST.get('event_date',None)
+		e_fee= request.POST.get('fee',None)
+		e_venue= request.POST.get('event_venue',None)
+		e_capacity= request.POST.get('capacity',None)
+		e_about= request.POST.get('about',None)
+		new_event = Event.objects.create(event_name=e_name,event_date=e_date,
+		fee=e_fee,event_venue=e_venue,capacity=e_capacity,about=e_about)
+		return redirect(f"/home/")
+	return render(request,"addevent.html")
+
+def adminview(request):
+	event=Event.objects.all()
+	return render(request,"adminview.html",{"events":event})
+
 
 
 
