@@ -1,9 +1,15 @@
-The softwares needed will be :
-sublime text
-python 3.7
-First open the files in sublime text.
-Then open the command prompt and direct to the folder where the project files are saved.
-Use "python manage.py runserver" to run the server.
-Copy the link obtained and give '<link>/home' to get the home page.
-The username of the admin is "Chinmayee"
-The password is "Chinnu908"
+certifi==2019.3.9
+dj-database-url==0.5.0
+Django==2.1.5
+django-crispy-forms==1.7.2
+django-heroku==0.3.1
+djangorestframework==3.9.2
+gunicorn==19.9.0
+Pillow==5.4.1
+pipenv==2018.11.26
+psycopg2==2.8.2
+pytz==2018.9
+virtualenv==16.4.0
+virtualenv-clone==0.5.3
+virtualenvwrapper-win==1.2.5
+whitenoise==4.1.2
